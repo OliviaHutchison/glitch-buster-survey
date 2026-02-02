@@ -29,38 +29,38 @@ function H(s){
 function dm() {
     //--------------------------------------------------------------------------
     //
-    //  lz String Methods
+    //  lA String Methods
     //
     //--------------------------------------------------------------------------
 
     /**
-    * ly a df hJ hI B hH
-    * @hG hJ Array of B df values, lx elements 0 - 23 de
-    *                a: lw
-    *                b: lv
-    *                c: lu
-    *                d: lt
-    *                e: ls
-    *                f: lr
+    * lz a df hJ hI B hH
+    * @hG hJ Array of B df values, ly elements 0 - 23 de
+    *                a: lx
+    *                b: lw
+    *                c: lv
+    *                d: lu
+    *                e: lt
+    *                f: ls
     *                g: fk
     *                h: dd
-    *                i: lq
-    *                j: lp
-    *                k: lo
-    *                l: ln
-    *                m: lm
-    *                n: ll
-    *                o: lk
-    *                p: lj
-    *                q: li
-    *                r: lh
-    *                s: lg
-    *                t: le
-    *                u: ld
-    *                v: lc
-    *                w: lb
+    *                i: lr
+    *                j: lq
+    *                k: lp
+    *                l: lo
+    *                m: ln
+    *                n: lm
+    *                o: ll
+    *                p: lk
+    *                q: lj
+    *                r: li
+    *                s: lh
+    *                t: lg
+    *                u: le
+    *                v: ld
+    *                w: lc
     *                x: fj
-    * @return az B hF la l_
+    * @return az B hF lb la
     */
     this.hE = function(values){
         for(var i = 0 ; i < 24 ; i++){
@@ -103,19 +103,19 @@ function dm() {
 */
 /** @constructor */
 function fi() {
-    // l$ hC de kZ kY ay function kX
+    // l_ hC de l$ kZ ay function kY
 
     //--------------------------------------------------------------------------
     //
-    //  kW kV
+    //  kX kW
     //
     //--------------------------------------------------------------------------
 
-    this.bS = new dm();  // kU kT
+    this.bS = new dm();  // kV kU
 
     //--------------------------------------------------------------------------
     //
-    //  hB kS
+    //  hB kT
     //
     //--------------------------------------------------------------------------
 
@@ -124,16 +124,16 @@ function fi() {
         bP, // da of B hA ba
 
         ax,          // hz of B N
-        d_,       // kR d$ aa bO hy (from fk)
+        d_,       // kS d$ aa bO hy (from fk)
 
-        cZ,           // kQ dd
+        cZ,           // kR dd
         fg,      // ff in dd
 
         fe,    // fd _l cY B note _Q
         fc,      // Counter for B note cY
-        b_,     // hx B time hw this hv, B note kP
+        b_,     // hx B time hw this hv, B note kQ
 
-        a_,      // kO of _h kN kM in B hu N
+        a_,      // kP of _h kO kN in B hu N
         fb;       // fd _l cY B ht _Q
 
     //--------------------------------------------------------------------------
@@ -143,8 +143,8 @@ function fi() {
     //--------------------------------------------------------------------------
 
     /**
-    * kL B kK hC from B kJ
-    * kI kH bc B start (total reset) _L for B repeat cX (kG reset)
+    * kM B kL hC from B kK
+    * kJ kI bc B start (total reset) _L for B repeat cX (kH reset)
     */
     this.fa = function() {
         // f_ f$
@@ -166,24 +166,24 @@ function fi() {
         b_  = p.m == 1 ? 0 : (1 - p.m) * (1 - p.m) * 20000 + 32;
     };
 
-    // I split B reset() function hI eZ hs for kF kE
+    // I split B reset() function hI eZ hs for kG kF
     this.hr = function() {
         this.fa();
 
         // f_ f$
         var p = this.bS;
 
-        // kD B length is all kC kB dc, kA else hD kz
+        // kE B length is all kD kC dc, kB else hD kA
         bR = p.b  * p.b  * 100000;
         bQ = p.c * p.c * 100000;
         bP = p.e   * p.e   * 100000 + 12;
-        // ky length of B volume kx (_L kw bO)
-        // kv ku B length cW kt ks _Q 3 kr kq kp fm ko B padding "==" b$ kn encode
+        // kz length of B volume ky (_L kx bO)
+        // kw kv B length cW ku kt _Q 3 ks kr kq fm kp B padding "==" b$ ko encode
         return ((bR + bQ + bP) / 3 | 0) * 3;
     };
 
     /**
-    * km B N _l B kl buffer hq
+    * kn B N _l B km buffer hq
     * @hG buffer A hq _l write B N _l
     * @return az B N is hp
     */
@@ -211,7 +211,7 @@ function fi() {
             // fj * fj (for cU cT)
             hi = p.x * p.x,
 
-            // kk frequency aa kj
+            // kl frequency aa kk
             hh = p.g,
 
             // az B aZ is active
@@ -223,16 +223,16 @@ function fi() {
             // cS offset for aZ cX
             eT = p.q * p.q * (p.q < 0 ? -1020 : 1020),
 
-            // hx B time hw this hv, some of B    ki de reset
+            // hx B time hw this hv, some of B    kj de reset
             cR = p.p ? ((1 - p.p) * (1 - p.p) * 20000 | 0) + 32 : 0,
 
-            // hf kh kg (kf bc ke of fh)
+            // hf ki kh (kg bc kf of fh)
             hd = p.d,
 
-            // fd _l cY B d$ of B N _Q bc B kd of B bN N
+            // fd _l cY B d$ of B N _Q bc B ke of B bN N
             eS = p.j / 2,
 
-            // eX bc which B bN eU kc
+            // eX bc which B bN eU kd
             hc = p.k * p.k * 0.01,
 
             // hf K of N _l hb
@@ -243,7 +243,7 @@ function fi() {
             h_ = 1 / bQ, // (for cU cT)
             h$ = 1 / bP; // (for cU cT)
 
-        // kb ka which k_ k$ eR B N position cW move
+        // kc kb which ka k_ eR B N position cW move
         var aY = 5 / (1 + p.u * p.u * 20) * (0.01 + a$);
         if (aY > 0.8) {
             aY = 0.8;
@@ -252,21 +252,21 @@ function fi() {
 
         var cN = 0,     // az B bO has hp
             eQ    = 0, // eP ba of B bM (attack, fh, hA, end)
-            aX     = 0, // eP time ay cO jZ ba
+            aX     = 0, // eP time ay cO k$ ba
             aW   = 0, // eP volume of B bM
             cM      = 0, // gZ N position b$ high-_P filter
-            bL = 0, // ff in low-_P N position, cL jY _Q B cV _L jX
-            eO,       // jW low-_P N position
+            bL = 0, // ff in low-_P N position, cL jZ _Q B cV _L jY
+            eO,       // jX low-_P N position
             aV      = 0, // gZ N position b$ low-_P filter
-            _t,           // hz jV _Q bN
+            _t,           // hz jW _Q bN
             _Z            = 0, // cS ay B N
-            _Y,            // jU aZ offset, for jT jS
-            cK        = 0, // jR ay B aZ buffer
-            _K,                  // cS jQ cL a Number from 0-1, _o for eR sin gY
-            eN       = 0, // Counter for B jP
-            _d,               // jO-av jN 8 gX cJ jM av, jL eM _l get B super av
-            au,          // jK av jJ _l B N
-            eL     = 0; // cS ay B bN jI N
+            _Y,            // jV aZ offset, for jU jT
+            cK        = 0, // jS ay B aZ buffer
+            _K,                  // cS jR cL a Number from 0-1, _o for eR sin gY
+            eN       = 0, // Counter for B jQ
+            _d,               // jP-av jO 8 gX cJ jN av, jM eM _l get B super av
+            au,          // jL av jK _l B N
+            eL     = 0; // cS ay B bN jJ N
 
         // gW of N values _o _l create B eM of eU gV N
         var bK = new Array(1024),
@@ -286,7 +286,7 @@ function fi() {
                 return i;
             }
 
-            // jH every cR gX, jG jF B bO hH
+            // jI every cR gX, jH jG B bO hH
             if (cR) {
                 if (++eN >= cR) {
                     eN = 0;
@@ -294,7 +294,7 @@ function fi() {
                 }
             }
 
-            // az b_ is jE, jD B pitch
+            // az b_ is jF, jE B pitch
             if (b_) {
                 if (++fc >= b_) {
                     b_ = 0;
@@ -302,11 +302,11 @@ function fi() {
                 }
             }
 
-            // jC _L apply dd
+            // jD _L apply dd
             cZ += fg;
             ax *= cZ;
 
-            // jB for frequency jA gT low, _L hy B bO if a fk jz set
+            // jC for frequency jB gT low, _L hy B bO if a fk jA set
             if (ax > d_) {
                 ax = d_;
                 if (hh > 0) {
@@ -327,7 +327,7 @@ function fi() {
                 _t = 8;
             }
 
-            // jy B hu ht
+            // jz B hu ht
             if (!cQ) {
                 a_ += fb;
                 if (a_ < 0) {
@@ -337,7 +337,7 @@ function fi() {
                 }
             }
 
-            // eJ ay B jx jw of B volume bM
+            // eJ ay B jy jx of B volume bM
             if (++aX > cP) {
                 aX = 0;
 
@@ -350,7 +350,7 @@ function fi() {
                 }
             }
 
-            // jv B volume ju dg B position in B bM
+            // jw B volume jv dg B position in B bM
             switch (eQ) {
                 case 0:
                     aW = aX * ha;
@@ -389,12 +389,12 @@ function fi() {
 
             au = 0;
             for (var j = 8; j--; ) {
-                // jt ay B d$
+                // ju ay B d$
                 _Z++;
                 if (_Z >= _t) {
                     _Z %= _t;
 
-                    // js new random gU for this d$
+                    // jt new random gU for this d$
                     if (cQ == 3) {
                         for (var n = aU.length; n--; ) {
                             aU[n] = F(-1, 1);
@@ -402,21 +402,21 @@ function fi() {
                     }
                 }
 
-                // jr B av from B jq
+                // js B av from B jr
                 switch (cQ) {
-                    case 0: // jp N
+                    case 0: // jq N
                         _d = ((_Z / _t) < a_) ? 0.5 : -0.5;
                         break;
-                    case 1: // jo N
+                    case 1: // jp N
                         _d = 1 - _Z / _t * 2;
                         break;
-                    case 2: // jn N (eR _L jm gY)
+                    case 2: // jo N (eR _L jn gY)
                         _K = _Z / _t;
                         _K = (_K > 0.5 ? _K - 1 : _K) * 6.28318531;
                         _d = 1.27323954 * _K + 0.405284735 * _K * _K * (_K < 0 ? 1 : -1);
                         _d = 0.225 * ((_d < 0 ? -1 : 1) * _d * _d  - _d) + _d;
                         break;
-                    case 3: // jl
+                    case 3: // jm
                         _d = aU[abs(_Z * 32 / _t | 0)];
                 }
 
@@ -455,10 +455,10 @@ function fi() {
                 au += _d;
             }
 
-            // jk eM B super eI _L jj ji
+            // jl eM B super eI _L jk jj
             au *= 0.125 * aW * hi;
 
-            // jh if gT jg
+            // ji if gT jh
             buffer[i] = au >= 1 ? 32767 : au <= -1 ? -32768 : au * 32767 | 0;
         }
 
@@ -466,34 +466,34 @@ function fi() {
     };
 }
 
-// jf from fl://je.jd/jc/
+// jg from fl://jf.je/jd/
 var cI = new fi();
 
-// jb for B ja j_
+// jc for B jb ja
 var _J = function(df) {
     // gS dm
     cI.bS.hE(df);
 
-    // j$ iZ
+    // j_ j$
     var eH = cI.hr();
     var aT = new Uint8Array(((eH + 1) / 2 | 0) * 4 + 44);
     var _o = cI.ho(new Uint16Array(aT.buffer, 44), eH) * 2;
     var _s = new Uint32Array(aT.buffer, 0, 44);
 
-    // gS iY
+    // gS iZ
     _s[0] = 0x46464952; // "RIFF"
     _s[1] = _o + 36;  // put total size dc
     _s[2] = 0x45564157; // "WAVE"
     _s[3] = 0x20746D66; // "fmt "
-    _s[4] = 0x00000010; // size of B iX
-    _s[5] = 0x00010001; // iW: 1 channel, iV format
+    _s[4] = 0x00000010; // size of B iY
+    _s[5] = 0x00010001; // iX: 1 channel, iW format
     _s[6] = 0x0000AC44; // 44,100 eI cJ gV
-    _s[7] = 0x00015888; // iU rate: eZ gR cJ av
-    _s[8] = 0x00100002; // 16 iT cJ av, iS dg every eZ gR
+    _s[7] = 0x00015888; // iV rate: eZ gR cJ av
+    _s[8] = 0x00100002; // 16 iU cJ av, iT dg every eZ gR
     _s[9] = 0x61746164; // "aT"
     _s[10] = _o;      // put number of eI dc
 
-    // iR encoding iQ _Q iP, @iO
+    // iS encoding iR _Q iQ, @iP
     _o += 44;
     var i = 0,
         bJ = /*nomangle*/'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'/*/nomangle*/,
@@ -508,7 +508,7 @@ var _J = function(df) {
     return eF;
 };
 
-// iN all iM hs _l B global scope
+// iO all iN hs _l B global scope
 Object.getOwnPropertyNames(Math).forEach(function(n){
     if(Math[n].call){
         this[n] = Math[n];
@@ -764,7 +764,7 @@ if(true){
             _o[i] = 0;
         }
 
-        window.iF = function(){
+        window.iG = function(){
             var ey = [];
             for(var i in _o){
                 if(!_o[i]){
@@ -1046,7 +1046,7 @@ function F(a, b){
     return random() * ((a || 1) - ~~b) + ~~b;
 }
 
-// jK distance
+// jL distance
 function _G(a, b){
     return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
 }
@@ -1164,11 +1164,11 @@ function gq(n, l){
     return n;
 }
 
-function em(t, iE){
+function em(t, iF){
     var m = ~~(t / 60),
         s = ~~(t % 60);
 
-    return gq(m, 2) + ':' + gq(s, 2) + (iE ? '.' + gq(~~(t % 1 * 100), 2) : '');
+    return gq(m, 2) + ':' + gq(s, 2) + (iF ? '.' + gq(~~(t % 1 * 100), 2) : '');
 }
 
 function cu(){
@@ -1178,7 +1178,7 @@ function cu(){
 
     this.T = function(d, x, y, a){
         this.am.push({
-            d: d, // iD
+            d: d, // iE
             x: x,
             y: y,
             a: a, // action
@@ -1230,8 +1230,8 @@ function cs(bB){
 
     var t = em(G.bb);
 
-    if (bB === 1) {
-    window.location.href = "https://example.com/";
+    if (bB === 2) {
+        window.parent.postMessage({ iD: 1 }, "*");
     }
 
     this.T(T(/*nomangle*/'retry'/*/nomangle*/), 0, 420, G.cr);
@@ -1305,7 +1305,7 @@ function gp(){
     cu.call(this);
 
     this.T(T(/*nomangle*/'high'/*/nomangle*/, 500), 0, 420, function(){
-        _k = 0; // ko _l switch from undefined
+        _k = 0; // kp _l switch from undefined
         G.cq();
     });
     this.T(T(/*nomangle*/'low'/*/nomangle*/, 500), 0, 560, function(){
@@ -1431,7 +1431,7 @@ function gj(_y){
 
     return {
         '_y': _y._y.map(function(r){
-            return r.slice(0).reverse(); // reverse() modifies B hJ kr kq ko _l make a im of it
+            return r.slice(0).reverse(); // reverse() modifies B hJ ks kr kp _l make a im of it
         }),
         '_F': _F
     };
@@ -1470,17 +1470,17 @@ function gg(id){
         for(_ = 0 ; _ < bq ; _++){
             _W[$][_] = 0;
 
-            // hf S above jz going down, ko _l ensure there's a _l this one
+            // hf S above jA going down, kp _l ensure there's a _l this one
             if(ck.indexOf(_) >= 0){
                 _W[$][_] |= 1;
             }
 
-            // Need _l connect left if kq're fm dg B far left
+            // Need _l connect left if kr're fm dg B far left
             if(_ > 0){
                 _W[$][_] |= 4;
             }
 
-            // Need _l connect right if kq're fm dg B far right
+            // Need _l connect right if kr're fm dg B far right
             if(_ < bq - 1){
                 _W[$][_] |= 8;
             }
@@ -1635,7 +1635,7 @@ function eb(x, y, angle, aM, bo){
             }else{
                 for(var i in G._E){
                     if(G._E[i] != P && _G(G._E[i], this) < 40 / 2){
-                        return this.e$(); // no ko _l do B rest
+                        return this.e$(); // no kp _l do B rest
                     }
                 }
             }
@@ -1909,7 +1909,7 @@ function fU(){
     // Lazy init
     this.bm = this.bl = this.x = this.y = 0;
 
-    // jR bc which B camera would ideally kt
+    // jS bc which B camera would ideally ku
     this.target = function(_a){
         var x, y;
         if(!this.ai){
@@ -1925,7 +1925,7 @@ function fU(){
         };
     };
 
-    // Instantly kc B camera _l B position lx it's supposed _l kt
+    // Instantly kd B camera _l B position ly it's supposed _l ku
     this.fT = function(e){
         var t = this.target();
         this.bm = this.x = t.x;
@@ -2267,7 +2267,7 @@ function cz(){
         // Collisions
         this.aG = this.fG(aa);
 
-        // az there has been no adjustment for up di down, it means kq're in B air
+        // az there has been no adjustment for up di down, it means kr're in B air
         if(!(this.aG & 2) && !(this.aG & 1)){
             _U = max(1, _U);
         }
@@ -2330,7 +2330,7 @@ function cz(){
         this.Y = 0;
         _U = 0;
 
-        // Find B S kC is B closest
+        // Find B S kD is B closest
         var S = U.sort(function(a, b){
             return abs(a._h.x - P.x) - abs(b._h.x - P.x);
         })[0];
@@ -2361,9 +2361,9 @@ function cz(){
     };
 
     this.fD = function(U){
-        this.Y = 0; // prevent from pushing kC S
+        this.Y = 0; // prevent from pushing kD S
 
-        // Find B S kC jz B least dangerous
+        // Find B S kD jA B least dangerous
         // We assume types de sorted from non lethal _l most lethal
         var S = U.sort(function(a, b){
             return abs(a._h.x - P.x) - abs(b._h.x - P.x);
@@ -2534,7 +2534,7 @@ function dJ(x, y){
                 var dI = abs(P.x - this.x),
                     dH = abs(P.y - this.y);
                 if(dI < 40 && dH < 52){
-                    // Okay there's a collision, but is he landing dg iP di is he colliding with iP?
+                    // Okay there's a collision, but is he landing dg iQ di is he colliding with iQ?
                     if(dI < dH && P.y < this.y && P.Y > 0){
                         P.ae(0.8, 1);
                         this.aL(P);
@@ -2805,7 +2805,7 @@ function fu(){
     G._N = 0;
     G.aI = 1;
     
-    G.bg = 30;
+    G.bg = 300;
 
     G.t = 0;
     //G.frameCount = 0;
@@ -2846,7 +2846,7 @@ function fu(){
         // fZ
         W = new fZ(gg(++G._N));
 
-        // Keeping track of B items kq cW _V
+        // Keeping track of B items kr cW _V
         W.fs = {
             1: 8 - P._X, // max 6 _X
             2: 10 - P.al // max 5 nades
@@ -2925,7 +2925,7 @@ function fu(){
     G._$ = function(e){
         G.t += e;
 
-        /*// 100th frame, checking if kq de in a bad situation, _L if yes, enable shitty mode
+        /*// 100th frame, checking if kr de in a bad situation, _L if yes, enable shitty mode
         if(++G.frameCount == 100 && (G.frameCount / ((Date.now() - G.frameCountStart) / 1000) < 30)){
             G.gn(G.aI * 0.5);
             _k = 1;
@@ -3019,7 +3019,7 @@ function fu(){
     };
 
     G.fq = function(e){
-        // jt
+        // ju
         for(var i = G.ao.length ; --i >= 0 ;){
             G.ao[i]._$(e);
         }
