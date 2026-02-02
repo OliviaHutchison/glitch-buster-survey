@@ -1230,8 +1230,8 @@ function GameOverMenu(reason){
 
     var t = formatTime(G.totalTime);
 
-    if (reason === 1) {
-    window.location.href = "https://example.com/";
+    if (reason === 2) {
+        window.parent.postMessage({ gameComplete: 1 }, "*");
     }
 
     this.button(button(/*nomangle*/'retry'/*/nomangle*/), 0, 420, G.newGame);
@@ -2805,7 +2805,7 @@ function Game(){
     G.currentLevel = 0;
     G.resolution = 1;
     
-    G.timeLeft = 30;
+    G.timeLeft = 300;
 
     G.t = 0;
     //G.frameCount = 0;
