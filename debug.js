@@ -1238,12 +1238,16 @@ function GameOverMenu(reason){
     }
     if (reason === 2) {
         window.parent.postMessage({gameComplete: 1, score: 13}, "*");
+        window.parent.postMessage({ "gameComplete": 1, "score": G.highscore }, "*");
         this.button(button(/*nomangle*/'retry'/*/nomangle*/), 0, 420, G.newGame);
         this.button(button(/*nomangle*/'back'/*/nomangle*/), 0, 560, G.mainMenu);
     } else if (reason === 1) {
-        window.parent.postMessage({gameComplete: 1, score: (G.highscore)}, "*");
+        window.parent.postMessage({ "gameComplete": 1, "score": G.highscore }, "*");
+        console.log("Sending message:", {gameComplete: 1, score: G.highscore});
         this.button(button(/*nomangle*/'back'/*/nomangle*/), 0, 560, G.mainMenu);
     } else{
+        window.parent.postMessage({ "gameComplete": 1, "score": G.highscore }, "*");
+        console.log("Sending message:", {gameComplete: 1, score: G.highscore});
         this.button(button(/*nomangle*/'retry'/*/nomangle*/), 0, 420, G.newGame);
         this.button(button(/*nomangle*/'back'/*/nomangle*/), 0, 560, G.mainMenu);
     }

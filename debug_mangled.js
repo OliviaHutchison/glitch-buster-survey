@@ -11,17 +11,17 @@ function H(s){
 *
 * iG 2010 dp dn
 *
-* iF bg B iE _u, iD 2.0 (B "_u");
-* iC dm fq iB this iA iz in iy with B _u.
-* ix dm iw a iv of B _u bf
+* iF bh B iE _u, iD 2.0 (B "_u");
+* iC dm ft iB this iA iz in iy with B _u.
+* ix dm iw a iv of B _u bg
 *
-*   fp://iu.ir.org/iq/ip-2.0
+*   fs://iu.ir.org/iq/ip-2.0
 *
 * io required _Q im il dl ik _l in ij, ii
-* dk bg B _u is dk dj ih "AS IS" ig,
+* dk bh B _u is dk dj ih "AS IS" ig,
 * ie ic ib ia i_ i$ hZ, hY hX dl hW.
 * hV B _u for B hU language hT hS _N
-* hR bg B _u.
+* hR bh B _u.
 *
 * @hQ dp dn
 */
@@ -42,7 +42,7 @@ function dq() {
     *                d: lB
     *                e: lA
     *                f: lz
-    *                g: fo
+    *                g: fq
     *                h: dg
     *                i: ly
     *                j: lx
@@ -59,7 +59,7 @@ function dq() {
     *                u: lm
     *                v: ll
     *                w: lk
-    *                x: fn
+    *                x: fp
     * @return aA B hL lj li
     */
     this.hK = function(values){
@@ -72,9 +72,9 @@ function dq() {
             this.c = 0.01;
         }
 
-        var bd = this.b + this.c + this.e;
-        if (bd < 0.18) {
-            var ab = 0.18 / bd;
+        var bf = this.b + this.c + this.e;
+        if (bf < 0.18) {
+            var ab = 0.18 / bf;
             this.b *= ab;
             this.c *= ab;
             this.e *= ab;
@@ -83,26 +83,26 @@ function dq() {
 }
 
 /**
-* fm
+* fo
 *
 * iG 2010 dp dn
 *
-* iF bg B iE _u, iD 2.0 (B "_u");
-* iC dm fq iB this iA iz in iy with B _u.
-* ix dm iw a iv of B _u bf
+* iF bh B iE _u, iD 2.0 (B "_u");
+* iC dm ft iB this iA iz in iy with B _u.
+* ix dm iw a iv of B _u bg
 *
-*   fp://iu.ir.org/iq/ip-2.0
+*   fs://iu.ir.org/iq/ip-2.0
 *
 * io required _Q im il dl ik _l in ij, ii
-* dk bg B _u is dk dj ih "AS IS" ig,
+* dk bh B _u is dk dj ih "AS IS" ig,
 * ie ic ib ia i_ i$ hZ, hY hX dl hW.
 * hV B _u for B hU language hT hS _N
-* hR bg B _u.
+* hR bh B _u.
 *
 * @hQ dp dn
 */
 /** @constructor */
-function fm() {
+function fo() {
     // lh hI dh lg le az function ld
 
     //--------------------------------------------------------------------------
@@ -119,22 +119,22 @@ function fm() {
     //
     //--------------------------------------------------------------------------
 
-    var bV, // de of B attack bc
-        bU, // de of B fl bc
-        bT, // de of B hG bc
+    var bV, // de of B attack bd
+        bU, // de of B fn bd
+        bT, // de of B hG bd
 
         ay,          // hF of B O
-        dd,       // kZ dc aa bS hE (from fo)
+        dd,       // kZ dc aa bS hE (from fq)
 
         da,           // kY dg
-        fk,      // fj in dg
+        fm,      // fl in dg
 
-        fi,    // fh _l d_ B note _Q
-        fg,      // Counter for B note d_
-        bb,     // hD B time hC this hB, B note kX
+        fk,    // fj _l d_ B note _Q
+        fi,      // Counter for B note d_
+        bc,     // hD B time hC this hB, B note kX
 
         a_,      // kW of _h kV kU in B hA O
-        ff;       // fh _l d_ B hz _Q
+        fh;       // fj _l d_ B hz _Q
 
     //--------------------------------------------------------------------------
     //
@@ -144,33 +144,33 @@ function fm() {
 
     /**
     * kT B kS hI from B kR
-    * kQ kP bf B start (total reset) _N for B repeat d$ (kO reset)
+    * kQ kP bg B start (total reset) _N for B repeat d$ (kO reset)
     */
-    this.fe = function() {
-        // fd fc
+    this.fg = function() {
+        // ff fe
         var p = this.bW;
 
         ay       = 100 / (p.f * p.f + 0.001);
         dd    = 100 / (p.g   * p.g   + 0.001);
 
         da        = 1 - p.h * p.h * p.h * 0.01;
-        fk   = -p.i * p.i * p.i * 0.000001;
+        fm   = -p.i * p.i * p.i * 0.000001;
 
         if(!p.a){
             a_ = 0.5 - p.n / 2;
-            ff  = -p.o * 0.00005;
+            fh  = -p.o * 0.00005;
         }
 
-        fi = 1 + p.l * p.l * (p.l > 0 ? -0.9 : 10);
-        fg   = 0;
-        bb  = p.m == 1 ? 0 : (1 - p.m) * (1 - p.m) * 20000 + 32;
+        fk = 1 + p.l * p.l * (p.l > 0 ? -0.9 : 10);
+        fi   = 0;
+        bc  = p.m == 1 ? 0 : (1 - p.m) * (1 - p.m) * 20000 + 32;
     };
 
-    // I split B reset() function hO fb hy for kN kM
+    // I split B reset() function hO fd hy for kN kM
     this.hx = function() {
-        this.fe();
+        this.fg();
 
-        // fd fc
+        // ff fe
         var p = this.bW;
 
         // kL B length is all kK kJ df, kI else hJ kH
@@ -178,7 +178,7 @@ function fm() {
         bU = p.c * p.c * 100000;
         bT = p.e   * p.e   * 100000 + 12;
         // kG length of B volume kF (_N kE bS)
-        // kD kC B length cZ kB kA _Q 3 kz ky kx fq kw B padding "==" ba kv encode
+        // kD kC B length cZ kB kA _Q 3 kz ky kx ft kw B padding "==" bb kv encode
         return ((bV + bU + bT) / 3 | 0) * 3;
     };
 
@@ -188,97 +188,97 @@ function fm() {
     * @return aA B O is hv
     */
     this.hu = function(buffer, length) {
-        // fd fc
+        // ff fe
         var p = this.bW;
 
         // aA B filters dh active
-        var fa = p.s != 1 || p.v,
+        var fc = p.s != 1 || p.v,
             // ht ab which hs B hr B O position cZ move
             ax = p.v * p.v * 0.1,
 
-            // f_ of B high-_P cY ab
-            f$ = 1 + p.w * 0.0003,
+            // fb of B high-_P cY ab
+            fa = 1 + p.w * 0.0003,
 
             // ht ab which hs B hr B O position cZ move
             a$ = p.s * p.s * p.s * 0.1,
 
-            // f_ of B low-_P cY ab
+            // fb of B low-_P cY ab
             hq = 1 + p.t * 0.0001,
 
             // aA B low _P filter is active
             hp = p.s != 1,
 
-            // fn * fn (for cX cW)
+            // fp * fp (for cX cW)
             ho = p.x * p.x,
 
             // ks frequency aa kr
             hn = p.g,
 
-            // aA B b_ is active
-            eZ = p.q || p.r,
+            // aA B ba is active
+            f_ = p.q || p.r,
 
-            // fj in eY offset
+            // fl in f$ offset
             hm = p.r * p.r * p.r * 0.2,
 
-            // cV offset for b_ d$
-            eX = p.q * p.q * (p.q < 0 ? -1020 : 1020),
+            // cV offset for ba d$
+            eZ = p.q * p.q * (p.q < 0 ? -1020 : 1020),
 
             // hD B time hC this hB, some of B    kq dh reset
             cU = p.p ? ((1 - p.p) * (1 - p.p) * 20000 | 0) + 32 : 0,
 
-            // hl kp ko (kn bf km of fl)
+            // hl kp ko (kn bg km of fn)
             hk = p.d,
 
-            // fh _l d_ B dc of B O _Q bf B kl of B bR O
-            eW = p.j / 2,
+            // fj _l d_ B dc of B O _Q bg B kl of B bR O
+            eY = p.j / 2,
 
-            // f_ bf which B bR eY kk
+            // fb bg which B bR f$ kk
             hj = p.k * p.k * 0.01,
 
             // hl K of O _l hi
             cT = p.a;
 
-        var cS      = bV,     // de of B cR bQ bc
+        var cS      = bV,     // de of B cR bQ bd
             hh = 1 / bV, // (for cX cW)
             hg = 1 / bU, // (for cX cW)
             hf = 1 / bT; // (for cX cW)
 
-        // kj ki which kh kg eV B O position cZ move
-        var b$ = 5 / (1 + p.u * p.u * 20) * (0.01 + a$);
-        if (b$ > 0.8) {
-            b$ = 0.8;
+        // kj ki which kh kg eX B O position cZ move
+        var b_ = 5 / (1 + p.u * p.u * 20) * (0.01 + a$);
+        if (b_ > 0.8) {
+            b_ = 0.8;
         }
-        b$ = 1 - b$;
+        b_ = 1 - b_;
 
         var cQ = 0,     // aA B bS has hv
-            eU    = 0, // eT bc of B bQ (attack, fl, hG, end)
-            aZ     = 0, // eT time az cR kf bc
-            aY   = 0, // eT volume of B bQ
-            cP      = 0, // hd O position ba high-_P filter
-            bP = 0, // fj in low-_P O position, cO ke _Q B cY _N kd
-            eS,       // kc low-_P O position
-            aX      = 0, // hd O position ba low-_P filter
+            eW    = 0, // eV bd of B bQ (attack, fn, hG, end)
+            b$     = 0, // eV time az cR kf bd
+            aZ   = 0, // eV volume of B bQ
+            cP      = 0, // hd O position bb high-_P filter
+            bP = 0, // fl in low-_P O position, cO ke _Q B cY _N kd
+            eU,       // kc low-_P O position
+            aY      = 0, // hd O position bb low-_P filter
             _t,           // hF kb _Q bR
             _Z            = 0, // cV az B O
-            _Y,            // ka b_ offset, for k_ k$
-            cN        = 0, // jZ az B b_ buffer
-            _M,                  // cV jY cO a Number from 0-1, _o for eV sin hc
-            eR       = 0, // Counter for B jX
-            _e,               // jW-aw jV 8 hb cM jU aw, jT eQ _l get B super aw
+            _Y,            // ka ba offset, for k_ k$
+            cN        = 0, // jZ az B ba buffer
+            _M,                  // cV jY cO a Number from 0-1, _o for eX sin hc
+            eT       = 0, // Counter for B jX
+            _e,               // jW-aw jV 8 hb cM jU aw, jT eS _l get B super aw
             av,          // jS aw jR _l B O
-            eP     = 0; // cV az B bR jQ O
+            eR     = 0; // cV az B bR jQ O
 
-        // ha of O values _o _l create B eQ of eY h_ O
+        // ha of O values _o _l create B eS of f$ h_ O
         var bO = new Array(1024),
 
             // ha of random values _o _l hi h$
-            aW  = new Array(32);
+            aX  = new Array(32);
 
         for (var i = bO.length; i--; ) {
             bO[i] = 0;
         }
-        for (i = aW.length; i--; ) {
-            aW[i] = F(-1, 1);
+        for (i = aX.length; i--; ) {
+            aX[i] = F(-1, 1);
         }
 
         for (i = 0; i < length; i++) {
@@ -288,25 +288,25 @@ function fm() {
 
             // jP every cU hb, jO jN B bS hN
             if (cU) {
-                if (++eR >= cU) {
-                    eR = 0;
-                    this.fe();
+                if (++eT >= cU) {
+                    eT = 0;
+                    this.fg();
                 }
             }
 
-            // aA bb is jM, jL B pitch
-            if (bb) {
-                if (++fg >= bb) {
-                    bb = 0;
-                    ay *= fi;
+            // aA bc is jM, jL B pitch
+            if (bc) {
+                if (++fi >= bc) {
+                    bc = 0;
+                    ay *= fk;
                 }
             }
 
             // jK _N apply dg
-            da += fk;
+            da += fm;
             ay *= da;
 
-            // jJ for frequency jI gZ low, _N hE B bS if a fo jH set
+            // jJ for frequency jI gZ low, _N hE B bS if a fq jH set
             if (ay > dd) {
                 ay = dd;
                 if (hn > 0) {
@@ -316,10 +316,10 @@ function fm() {
 
             _t = ay;
 
-            // eO B bR d$
-            if (eW > 0) {
-                eP += hj;
-                _t *= 1 + sin(eP) * eW;
+            // eQ B bR d$
+            if (eY > 0) {
+                eR += hj;
+                _t *= 1 + sin(eR) * eY;
             }
 
             _t |= 0;
@@ -329,7 +329,7 @@ function fm() {
 
             // jG B hA hz
             if (!cT) {
-                a_ += ff;
+                a_ += fh;
                 if (a_ < 0) {
                     a_ = 0;
                 } else if (a_ > 0.5) {
@@ -337,11 +337,11 @@ function fm() {
                 }
             }
 
-            // eN az B jF jE of B volume bQ
-            if (++aZ > cS) {
-                aZ = 0;
+            // eP az B jF jE of B volume bQ
+            if (++b$ > cS) {
+                b$ = 0;
 
-                switch (++eU)  {
+                switch (++eW)  {
                     case 1:
                         cS = bU;
                         break;
@@ -351,25 +351,25 @@ function fm() {
             }
 
             // jD B volume jC dj B position in B bQ
-            switch (eU) {
+            switch (eW) {
                 case 0:
-                    aY = aZ * hh;
+                    aZ = b$ * hh;
                     break;
                 case 1:
-                    aY = 1 + (1 - aZ * hg) * 2 * hk;
+                    aZ = 1 + (1 - b$ * hg) * 2 * hk;
                     break;
                 case 2:
-                    aY = 1 - aZ * hf;
+                    aZ = 1 - b$ * hf;
                     break;
                 case 3:
-                    aY = 0;
+                    aZ = 0;
                     cQ = 1;
             }
 
-            // eN B b_ offset
-            if (eZ) {
-                eX += hm;
-                _Y = eX | 0;
+            // eP B ba offset
+            if (f_) {
+                eZ += hm;
+                _Y = eZ | 0;
                 if (_Y < 0) {
                     _Y = -_Y;
                 } else if (_Y > 1023) {
@@ -377,9 +377,9 @@ function fm() {
                 }
             }
 
-            // eN B high-_P filter cY
-            if (fa && f$) {
-                ax *= f$;
+            // eP B high-_P filter cY
+            if (fc && fa) {
+                ax *= fa;
                 if (ax < 0.00001) {
                     ax = 0.00001;
                 } else if (ax > 0.1) {
@@ -396,8 +396,8 @@ function fm() {
 
                     // jA new random h$ for this dc
                     if (cT == 3) {
-                        for (var n = aW.length; n--; ) {
-                            aW[n] = F(-1, 1);
+                        for (var n = aX.length; n--; ) {
+                            aX[n] = F(-1, 1);
                         }
                     }
                 }
@@ -410,19 +410,19 @@ function fm() {
                     case 1: // jw O
                         _e = 1 - _Z / _t * 2;
                         break;
-                    case 2: // jv O (eV _N ju hc)
+                    case 2: // jv O (eX _N ju hc)
                         _M = _Z / _t;
                         _M = (_M > 0.5 ? _M - 1 : _M) * 6.28318531;
                         _e = 1.27323954 * _M + 0.405284735 * _M * _M * (_M < 0 ? 1 : -1);
                         _e = 0.225 * ((_e < 0 ? -1 : 1) * _e * _e  - _e) + _e;
                         break;
                     case 3: // jt
-                        _e = aW[abs(_Z * 32 / _t | 0)];
+                        _e = aX[abs(_Z * 32 / _t | 0)];
                 }
 
-                // eO B low _N high _P filters
-                if (fa) {
-                    eS = aX;
+                // eQ B low _N high _P filters
+                if (fc) {
+                    eU = aY;
                     a$ *= hq;
                     if (a$ < 0) {
                         a$ = 0;
@@ -431,22 +431,22 @@ function fm() {
                     }
 
                     if (hp) {
-                        bP += (_e - aX) * a$;
-                        bP *= b$;
+                        bP += (_e - aY) * a$;
+                        bP *= b_;
                     } else {
-                        aX = _e;
+                        aY = _e;
                         bP = 0;
                     }
 
-                    aX += bP;
+                    aY += bP;
 
-                    cP += aX - eS;
+                    cP += aY - eU;
                     cP *= 1 - ax;
                     _e = cP;
                 }
 
-                // eO B b_ d$
-                if (eZ) {
+                // eQ B ba d$
+                if (f_) {
                     bO[cN % 1024] = _e;
                     _e += bO[(cN - _Y + 1024) % 1024];
                     cN++;
@@ -455,8 +455,8 @@ function fm() {
                 av += _e;
             }
 
-            // js eQ B super eM _N jr jq
-            av *= 0.125 * aY * ho;
+            // js eS B super eO _N jr jq
+            av *= 0.125 * aZ * ho;
 
             // jp if gZ jo
             buffer[i] = av >= 1 ? 32767 : av <= -1 ? -32768 : av * 32767 | 0;
@@ -466,8 +466,8 @@ function fm() {
     };
 }
 
-// jn from fp://jm.jl/jk/
-var cL = new fm();
+// jn from fs://jm.jl/jk/
+var cL = new fo();
 
 // jj for B ji jh
 var _L = function(di) {
@@ -475,10 +475,10 @@ var _L = function(di) {
     cL.bW.hK(di);
 
     // jg jf
-    var eL = cL.hx();
-    var aV = new Uint8Array(((eL + 1) / 2 | 0) * 4 + 44);
-    var _o = cL.hu(new Uint16Array(aV.buffer, 44), eL) * 2;
-    var _s = new Uint32Array(aV.buffer, 0, 44);
+    var eN = cL.hx();
+    var aW = new Uint8Array(((eN + 1) / 2 | 0) * 4 + 44);
+    var _o = cL.hu(new Uint16Array(aW.buffer, 44), eN) * 2;
+    var _s = new Uint32Array(aW.buffer, 0, 44);
 
     // gY je
     _s[0] = 0x46464952; // "RIFF"
@@ -487,25 +487,25 @@ var _L = function(di) {
     _s[3] = 0x20746D66; // "fmt "
     _s[4] = 0x00000010; // size of B jd
     _s[5] = 0x00010001; // jc: 1 channel, jb format
-    _s[6] = 0x0000AC44; // 44,100 eM cM h_
-    _s[7] = 0x00015888; // ja rate: fb gX cM aw
-    _s[8] = 0x00100002; // 16 j_ cM aw, j$ dj every fb gX
-    _s[9] = 0x61746164; // "aV"
-    _s[10] = _o;      // put number of eM df
+    _s[6] = 0x0000AC44; // 44,100 eO cM h_
+    _s[7] = 0x00015888; // ja rate: fd gX cM aw
+    _s[8] = 0x00100002; // 16 j_ cM aw, j$ dj every fd gX
+    _s[9] = 0x61746164; // "aW"
+    _s[10] = _o;      // put number of eO df
 
     // iZ encoding iY _Q iX, @iW
     _o += 44;
     var i = 0,
         bN = /*nomangle*/'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'/*/nomangle*/,
-        eK = /*nomangle*/'data:audio/wav;base64,'/*/nomangle*/;
+        eM = /*nomangle*/'data:audio/wav;base64,'/*/nomangle*/;
     for (; i < _o; i += 3){
-        var a = aV[i] << 16 | aV[i + 1] << 8 | aV[i + 2];
-        eK += bN[a >> 18] + bN[a >> 12 & 63] + bN[a >> 6 & 63] + bN[a & 63];
+        var a = aW[i] << 16 | aW[i + 1] << 8 | aW[i + 2];
+        eM += bN[a >> 18] + bN[a >> 12 & 63] + bN[a >> 6 & 63] + bN[a & 63];
     }
 
-    var eJ = new Audio();
-    eJ.src = eK;
-    return eJ;
+    var eL = new Audio();
+    eL.src = eM;
+    return eL;
 };
 
 // iV all iU hy _l B global scope
@@ -525,12 +525,12 @@ function _d(w, h, f){
     return c;
 }
 
-function eI(w, h, f){
+function eK(w, h, f){
     var c = _d(w, h, f);
     return c.getContext('2d').createPattern(c, 'repeat');
 }
 
-function eH(m, n){
+function eJ(m, n){
     var r = [];
     for(var $ = 0 ; $ < m.length + n * 2 ; $++){
         r.push([]);
@@ -545,7 +545,7 @@ function eH(m, n){
     return r;
 }
 
-function eG(m){
+function eI(m){
     var cK = [];
     m.forEach(function($){
         cK = cK.concat($);
@@ -553,7 +553,7 @@ function eG(m){
     return cK;
 }
 
-function eF(o){
+function eH(o){
     var r = {};
     for(var i in o){
         if(o[i].call){
@@ -573,8 +573,8 @@ var D = document,
     P, // player
     V, // camera
     PI = Math.PI,
-    aU = navigator.userAgent.match(/*nomangle*//andro|ipho|ipa|ipo|windows ph/i/*/nomangle*/),
-    J = aU ? 640 : 920,
+    aV = navigator.userAgent.match(/*nomangle*//andro|ipho|ipa|ipo|windows ph/i/*/nomangle*/),
+    J = aV ? 640 : 920,
     _c = 920;
 
 var gW = _L([0,,0.1434,,0.1212,0.4471,,0.2511,,,,,,0.0426,,,,,0.8862,,,,,0.5]),
@@ -590,7 +590,7 @@ var gW = _L([0,,0.1434,,0.1212,0.4471,,0.2511,,,,,,0.0426,,,,,0.8862,,,,,0.5]),
 function _K(s, c, cO, gN){
     var p, n = Y([0, 1]);
 
-    // Add _l B list of bw
+    // Add _l B list of bx
     G.add(p = {
         s: s,
         c: c,
@@ -610,21 +610,21 @@ function _K(s, c, cO, gN){
 
     // Interpolations
     cO.forEach(function(a, id){
-        var eE = [p].concat(a);
+        var eG = [p].concat(a);
 
         // Add B _A callback
         if(!id){
-            eE[7] = function(){
+            eG[7] = function(){
                 G._A(p);
             };
         }
 
         // Apply B interpolation
-        N.apply(0, eE);
+        N.apply(0, eG);
     });
 }
 
-var eD = eI(400, 400, function(r){
+var eF = eK(400, 400, function(r){
     with(r){
         fillStyle = '#000';
         fillRect(0, 0, 400, 400);
@@ -765,13 +765,13 @@ if(true){
         }
 
         window.iN = function(){
-            var eC = [];
+            var eE = [];
             for(var i in _o){
                 if(!_o[i]){
-                    eC.push(i);
+                    eE.push(i);
                 }
             }
-            return eC.sort();
+            return eE.sort();
         };
     })();
 }
@@ -782,11 +782,11 @@ function X(r, t, x, y, s, c){
             _o[t.charAt(i)] = 1;
         }
 
-        var eB = gF(t.charAt(i), s, c);
+        var eD = gF(t.charAt(i), s, c);
 
-        r.drawImage(eB, x, y);
+        r.drawImage(eD, x, y);
 
-        x += eB.width + s;
+        x += eD.width + s;
     }
 }
 
@@ -813,12 +813,12 @@ var cE = {};
 function gF(t, s, c){
     var key = t + s + c;
     if(!cE[key]){
-        var aT = cH[t];
-        cE[key] = _d(aT[0].length * s, aT.length * s, function(r){
+        var aU = cH[t];
+        cE[key] = _d(aU[0].length * s, aU.length * s, function(r){
             r.fillStyle = c;
-            for(var $ = 0 ; $ < aT.length ; $++){
-                for(var _ = 0 ; _ < aT[$].length ; _++){
-                    if(aT[$][_]){
+            for(var $ = 0 ; $ < aU.length ; $++){
+                for(var _ = 0 ; _ < aU[$].length ; _++){
+                    if(aU[$][_]){
                         r.fillRect(_ * s, $ * s, s, s);
                     }
                 }
@@ -877,7 +877,7 @@ function gE(){
                 y = sin(a) * l + P.y - 40;
 
             _K(4, '#fff', [
-                ['x', x, x, t, 0, eA],
+                ['x', x, x, t, 0, eC],
                 ['y', y, y + F(80, 240), t, 0],
                 ['s', F(8, 16), 0, t]
             ], 1);
@@ -885,10 +885,10 @@ function gE(){
     });
 
     P.cD = P._q = 0;
-    P.ez = 1;
+    P.eB = 1;
     G.aq = 1;
 
-    var ey = 500;
+    var eA = 500;
     if(!G._z){
         _r(function(){
             P._f([
@@ -900,7 +900,7 @@ function gE(){
                 /*nomangle*/'Pressing it twice lets you double jump!'/*/nomangle*/
             ]);
         }, 2000);
-        ey = 9000;
+        eA = 9000;
     }
 
     _r(function(){
@@ -908,18 +908,18 @@ function gE(){
     }, 500);
 
     _r(function(){
-        P.ez = 0;
+        P.eB = 0;
         P._q = 1;
-        ex();
-    }, ey);
+        ez();
+    }, eA);
 }
 
-function ew(f){
-    var aS = V.x + J,
-        aR = V.y + _c;
+function ey(f){
+    var aT = V.x + J,
+        aS = V.y + _c;
 
-    for(var $ = ~~(V.y / 80) ; $ <  ~~(aR / 80) + 1 ; $++){
-        for(var _ = ~~(V.x / 80) ; _ <  ~~(aS / 80) + 1 ; _++){
+    for(var $ = ~~(V.y / 80) ; $ <  ~~(aS / 80) + 1 ; $++){
+        for(var _ = ~~(V.x / 80) ; _ <  ~~(aT / 80) + 1 ; _++){
             if(W.U[$] && W.U[$][_]){
                 f(W.U[$][_]);
             }
@@ -927,10 +927,10 @@ function ew(f){
     }
 }
 
-function ex(){
+function ez(){
     G.aq = 0;
 
-    ew(function(t){
+    ey(function(t){
         var r = _H(t._h, P);
         t.bK = 0.5;
         N(t, 'bK', 0, 1, r / J, 0, bJ);
@@ -940,16 +940,16 @@ function ex(){
 function gC(){
     G.aq = 0;
 
-    ew(function(t){
+    ey(function(t){
         var r = _H(t._h, P);
         t.bK = 0.5;
         N(t, 'bK', 1, 0, r / J, 0, bJ);
     });
 }
 
-var ev = eI(400, 400, function(r){
-    var eu = cC.toString().split(';').slice(0, 20),
-        step = 400 / eu.length,
+var ex = eK(400, 400, function(r){
+    var ew = cC.toString().split(';').slice(0, 20),
+        step = 400 / ew.length,
         y = step / 2;
 
     with(r){
@@ -960,7 +960,7 @@ var ev = eI(400, 400, function(r){
         globalAlpha = 0.1;
         font = '14pt Courier New';
 
-        eu.forEach(function(l, i){
+        ew.forEach(function(l, i){
             fillText(l, 0, y);
 
             y += step;
@@ -1055,20 +1055,20 @@ function _H(a, b){
 }
 
 onresize = function(){
-    var et = innerWidth,
-        er = innerHeight,
+    var ev = innerWidth,
+        eu = innerHeight,
 
-        gA = et / er, // available ratio
+        gA = ev / eu, // available ratio
         cB = J / _c, // base ratio
         w,
         h,
         s = D.querySelector('#cc').style;
 
     if(gA <= cB){
-        w = et;
+        w = ev;
         h = w / cB;
     }else{
-        h = er;
+        h = eu;
         w = h * cB;
     }
 
@@ -1080,15 +1080,15 @@ function Y(bH, bG, gz){
     bH = bH.slice(0);
     bG = bG || 1;
 
-    var aQ = [];
+    var aR = [];
 
-    while(aQ.length < bG){
-        aQ = aQ.concat(
+    while(aR.length < bG){
+        aR = aR.concat(
             bH.splice(~~(random() * bH.length), 1) // returns B hP of deleted elements
         );
     }
 
-    return bG === 1 && !gz ? aQ[0] : aQ;
+    return bG === 1 && !gz ? aR[0] : aR;
 }
 
 function cA(a, b, c){
@@ -1112,7 +1112,7 @@ function gx(t, b, c, d) {
     return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
 }
 
-function eA(t, b, c, d) {
+function eC(t, b, c, d) {
     return sin((t / d) * PI * 4) * c + b;
 }
 
@@ -1167,7 +1167,7 @@ function gw(n, l){
     return n;
 }
 
-function eq(t, iM){
+function et(t, iM){
     var m = ~~(t / 60),
         s = ~~(t % 60);
 
@@ -1203,7 +1203,7 @@ function cz(){
     this._g = function(){
         R.globalAlpha = this._I;
 
-        R.fillStyle = ev;
+        R.fillStyle = ex;
         fillRect(0, 0, J, _c);
 
         var a = this._I;
@@ -1231,20 +1231,24 @@ function cv(bF){
         [/*nomangle*/'code fixed'/*/nomangle*/, '!!!']
     ][bF];
 
-    var t = eq(G.bd);
+    var t = et(G.bf);
 
-    if (G.bE < (G._z - 1)){
-        G.bE = G._z - 1
+    if (G.aQ < (G._z - 1)){
+        G.aQ = G._z - 1
     }
     if (bF === 2) {
-        window.parent.postMessage({gv: 1, gu: 13}, "*");
-        this.L(L(/*nomangle*/'retry'/*/nomangle*/), 0, 420, G.bD);
+        window.parent.postMessage({er: 1, eq: 13}, "*");
+        window.parent.postMessage({ "er": 1, "eq": G.aQ }, "*");
+        this.L(L(/*nomangle*/'retry'/*/nomangle*/), 0, 420, G.bE);
         this.L(L(/*nomangle*/'back'/*/nomangle*/), 0, 560, G.aP);
     } else if (bF === 1) {
-        window.parent.postMessage({gv: 1, gu: (G.bE)}, "*");
+        window.parent.postMessage({ "er": 1, "eq": G.aQ }, "*");
+        console.log("Sending message:", {er: 1, eq: G.aQ});
         this.L(L(/*nomangle*/'back'/*/nomangle*/), 0, 560, G.aP);
     } else{
-        this.L(L(/*nomangle*/'retry'/*/nomangle*/), 0, 420, G.bD);
+        window.parent.postMessage({ "er": 1, "eq": G.aQ }, "*");
+        console.log("Sending message:", {er: 1, eq: G.aQ});
+        this.L(L(/*nomangle*/'retry'/*/nomangle*/), 0, 420, G.bE);
         this.L(L(/*nomangle*/'back'/*/nomangle*/), 0, 560, G.aP);
     }
     
@@ -1257,41 +1261,41 @@ function cv(bF){
     this.cw();
 
     am.push(bF == 2 ? /*nomangle*/'time: '/*/nomangle*/ + t : /*nomangle*/'fixed '/*/nomangle*/ + (G._z - 1) + '/13');
-    am.push(/*nomangle*/'high score: '/*/nomangle*/ + G.bE);
+    am.push(/*nomangle*/'high score: '/*/nomangle*/ + G.aQ);
 
     var cu = am[0],
-        bC = 10,
-        ep = _J(cu) * bC,
+        bD = 10,
+        ep = _J(cu) * bD,
         ct = am[1],
-        bB = 10,
-        eo = _J(ct) * bB,
+        bC = 10,
+        eo = _J(ct) * bC,
         cs = am[2],
-        bA = 5,
-        en = _J(cs) * bA;
+        bB = 5,
+        en = _J(cs) * bB;
 
 
     var cr = am[3],
-        bz = 8, // slightly smaller text if iC want
-        em = _J(cr) * bz;
+        bA = 8, // slightly smaller text if iC want
+        em = _J(cr) * bA;
 
-    this.L(_d(em, bz * 5 + 5, function(r){
-    X(r, cr, 0, 5, bz, '#444');
-    X(r, cr, 0, 0, bz, '#fff');
+    this.L(_d(em, bA * 5 + 5, function(r){
+    X(r, cr, 0, 5, bA, '#444');
+    X(r, cr, 0, 0, bA, '#fff');
     }), (J - em) / 2, 340);
 
-    this.L(_d(ep, bC * 5 + 5, function(r){
-    	X(r, cu, 0, 5, bC, '#444');
-        X(r, cu, 0, 0, bC, '#fff');
+    this.L(_d(ep, bD * 5 + 5, function(r){
+    	X(r, cu, 0, 5, bD, '#444');
+        X(r, cu, 0, 0, bD, '#fff');
     }), (J - ep) / 2, 120);
 
-    this.L(_d(eo, bB * 5 + 5, function(r){
-        X(r, ct, 0, 5, bB, '#444');
-        X(r, ct, 0, 0, bB, '#fff');
+    this.L(_d(eo, bC * 5 + 5, function(r){
+        X(r, ct, 0, 5, bC, '#444');
+        X(r, ct, 0, 0, bC, '#fff');
     }), (J - eo) / 2, 200);
 
-    this.L(_d(en, bA * 5 + 5, function(r){
-        X(r, cs, 0, 5, bA, '#444');
-        X(r, cs, 0, 0, bA, '#fff');
+    this.L(_d(en, bB * 5 + 5, function(r){
+        X(r, cs, 0, 5, bB, '#444');
+        X(r, cs, 0, 0, bB, '#fff');
     }), (J - en) / 2, 280);
 }
 
@@ -1299,23 +1303,23 @@ function el(){
     cz.call(this);
 
     this.L(L(/*nomangle*/'tutorial'/*/nomangle*/), 0, 420, G.cq);
-    this.L(L(/*nomangle*/'start'/*/nomangle*/), 0, 560, G.bD);
+    this.L(L(/*nomangle*/'start'/*/nomangle*/), 0, 560, G.bE);
 
     this.cw();
 
-    var bx = (J - 460) / 2;
+    var bz = (J - 460) / 2;
     this.L(_d(460, 230, function(r){
     	X(r, 'glitch', 0, 10, 20, '#444');
     	X(r, 'glitch', 0, 0, 20, '#fff');
 
     	X(r, 'buster', 0, 130, 20, '#444');
     	X(r, 'buster', 0, 120, 20, '#fff');
-    }), bx, 90);
+    }), bz, 90);
 
     N(this.ao[this.ao.length - 1], 'o', 0, 1, 0.25, 0.5);
 }
 
-function gt(){
+function gv(){
     cz.call(this);
 
     this.L(L(/*nomangle*/'high'/*/nomangle*/, 500), 0, 420, function(){
@@ -1323,18 +1327,18 @@ function gt(){
         G.aP();
     });
     this.L(L(/*nomangle*/'low'/*/nomangle*/, 500), 0, 560, function(){
-        G.gs(0.5);
+        G.gu(0.5);
         _k = 1;
         G.aP();
     });
 
     this.cw();
 
-    var bx = (J - 270) / 2;
+    var bz = (J - 270) / 2;
     this.L(_d(270, 55, function(r){
         X(r, /*nomangle*/'quality'/*/nomangle*/, 0, 5, 10, '#444');
         X(r, /*nomangle*/'quality'/*/nomangle*/, 0, 0, 10, '#fff');
-    }), bx, bx);
+    }), bz, bz);
 }
 
 function ek(x, y, K){
@@ -1370,19 +1374,19 @@ function ek(x, y, K){
     };
 
     this._a = function(){
-        if(_H(this, P) < 40 && !this.gr){
+        if(_H(this, P) < 40 && !this.gt){
             G._A(this);
 
-            this.bw();
+            this.bx();
 
-            this.gr = 1;
+            this.gt = 1;
             gU.play();
 
             this.ei(); // defined in subclasses
         }
     };
 
-    this.bw = function(){
+    this.bx = function(){
         for(var i = 0 ; i < 10 ; i++){
             var x = F(this.x - 80 / 4, this.x + 80 / 4),
                 y = F(this.y - 80 / 4, this.y + 80 / 4),
@@ -1396,7 +1400,7 @@ function ek(x, y, K){
     };
 }
 
-function gq(x, y){
+function gs(x, y){
     ek.call(this, x, y, 2);
 
     this.ej = function(){
@@ -1416,7 +1420,7 @@ function gq(x, y){
     };
 }
 
-function gp(x, y){
+function gr(x, y){
     ek.call(this, x, y, 1);
 
     this.ej = function(){
@@ -1430,7 +1434,7 @@ function gp(x, y){
     };
 }
 
-function gn(_y){
+function gq(_y){
     var _G = _y._G;
     if(_y._G & 8){
         _G |= 4;
@@ -1451,37 +1455,37 @@ function gn(_y){
     };
 }
 
-function gm(bI, gl){
+function gp(bI, gn){
     return Y(bI.filter(function(m){
-        return m._G == gl;
+        return m._G == gn;
     }));
 }
 
 
-function gk(id){
+function gm(id){
     if(!id){
-        return eH(gB, 5);
+        return eJ(gB, 5);
     }
 
     // Mirror all B bI _l have more possibilities
-    var gj = bI.concat(bI.map(gn));
+    var gl = bI.concat(bI.map(gq));
 
-    var bv = id < 0 ? 4 : round((id - 1) * 0.4 + 2),
-        bu = id < 0 ? 5 : round((id - 1) * 0.2 + 3),
+    var bw = id < 0 ? 4 : round((id - 1) * 0.4 + 2),
+        bv = id < 0 ? 5 : round((id - 1) * 0.2 + 3),
         _W = [],
         _,
         $,
         co = [],
         aO = [];
 
-    for(_ = 0 ; _ < bu ; _++){
+    for(_ = 0 ; _ < bv ; _++){
         aO.push(_);
     }
 
-    for($ = 0 ; $ < bv ; $++){
+    for($ = 0 ; $ < bw ; $++){
         _W.push([]);
 
-        for(_ = 0 ; _ < bu ; _++){
+        for(_ = 0 ; _ < bv ; _++){
             _W[$][_] = 0;
 
             // hl T above jH going down, kw _l ensure there's a _l this one
@@ -1489,19 +1493,19 @@ function gk(id){
                 _W[$][_] |= 1;
             }
 
-            // Need _l connect left if ky're fq dj B far left
+            // Need _l connect left if ky're ft dj B far left
             if(_ > 0){
                 _W[$][_] |= 4;
             }
 
-            // Need _l connect right if ky're fq dj B far right
-            if(_ < bu - 1){
+            // Need _l connect right if ky're ft dj B far right
+            if(_ < bv - 1){
                 _W[$][_] |= 8;
             }
         }
 
         // Generate B link _l B lower $
-        if($ < bv - 1){
+        if($ < bw - 1){
             co = Y(aO, Y([1, 2, 3]), 1);
             co.forEach(function(_){
                 _W[$][_] |= 2;
@@ -1510,36 +1514,36 @@ function gk(id){
     }
 
     var M = [];
-    for($ = 0 ; $ < bv * 10 ; $++){
+    for($ = 0 ; $ < bw * 10 ; $++){
         M[$] = [];
     }
 
-    function gi(M, _y, gh, gg){
+    function gk(M, _y, gj, gi){
         for(var $ = 0 ; $ < 10 ; $++){
             for(var _ = 0 ; _ < 10 ; _++){
-                M[$ + gh][_ + gg] = _y[$][_];
+                M[$ + gj][_ + gi] = _y[$][_];
             }
         }
     }
 
-    for($ = 0 ; $ < bv ; $++){
-        for(_ = 0 ; _ < bu ; _++){
+    for($ = 0 ; $ < bw ; $++){
+        for(_ = 0 ; _ < bv ; _++){
 
-            var _y = gm(gj, _W[$][_])._y;
+            var _y = gp(gl, _W[$][_])._y;
 
             // Apply _y
-            gi(M, _y, $ * 10, _ * 10);
+            gk(M, _y, $ * 10, _ * 10);
         }
     }
 
     var _i = [],
         eh = [],
         eg = [],
-        bs = [];
+        bu = [];
 
     for($ = 0 ; $ < M.length ; $++){
         _i.push([]);
-        bs.push([]);
+        bu.push([]);
 
         M[$][_] = parseInt(M[$][_]);
 
@@ -1556,7 +1560,7 @@ function gk(id){
                 if(_i[$][_] == 1 && _i[$ - 1][_] == 0){
                     var f = [$, _];
                     eh.push(f);
-                    bs[$].push(f);
+                    bu[$].push(f);
                 }
 
                 if(_i[$][_] == 0 && _i[$ - 1][_] == 1){
@@ -1567,8 +1571,8 @@ function gk(id){
     }
 
     // Add a random _V _N a random _x
-    var _V = Y(eG(bs.slice(0, 10))),
-        _x = Y(eG(bs.slice(_i.length - 10 * 0.6)));
+    var _V = Y(eI(bu.slice(0, 10))),
+        _x = Y(eI(bu.slice(_i.length - 10 * 0.6)));
 
     _i[_V[0] - 1][_V[1]] = 4;
     _i[_x[0] - 1][_x[1]] = 5;
@@ -1587,10 +1591,10 @@ function gk(id){
         }
     });
 
-    return eH(_i, 5);
+    return eJ(_i, 5);
 }
 
-function ef(x, y, angle, aN, bq){
+function ef(x, y, angle, aN, bs){
     this.x = x;
     this.y = y;
     this.ee = 2;
@@ -1605,7 +1609,7 @@ function ef(x, y, angle, aN, bq){
             y: this.y
         };
 
-        if(!this.aj || this.aj.gf){
+        if(!this.aj || this.aj.gh){
             this.aj = 0;
 
             this._$ += e * 7500 * 0.5;
@@ -1615,13 +1619,13 @@ function ef(x, y, angle, aN, bq){
 
             this.ec += PI * 4 * e;
 
-            var ba = {
+            var bb = {
                 x: this.x,
                 y: this.y
             };
 
             // Trail
-            if(!_k && !bq){
+            if(!_k && !bs){
                 var t = {
                     _I: 1,
                     _g: function(){
@@ -1629,7 +1633,7 @@ function ef(x, y, angle, aN, bq){
                         R.lineWidth = 8;
                         beginPath();
                         moveTo(aa.x, aa.y);
-                        lineTo(ba.x, ba.y);
+                        lineTo(bb.x, bb.y);
                         stroke();
                     }
                 };
@@ -1642,7 +1646,7 @@ function ef(x, y, angle, aN, bq){
         }
 
         // Explosion
-        if(!bq){
+        if(!bs){
             this.ee -= e;
             if(this.ee <= 0){
                 this.eb();
@@ -1660,12 +1664,12 @@ function ef(x, y, angle, aN, bq){
             this.__ *= 0.5;
             this._$ *= 0.5;
 
-            var ge = 0,
+            var gg = 0,
                 _w;
             do{
                 _w = T._D(this, 16, 16);
 
-                if(bq){
+                if(bs){
                     this.aj |= _w;
                 }
 
@@ -1687,7 +1691,7 @@ function ef(x, y, angle, aN, bq){
                     this.__ = this._$ = 0;
                 }else{
                     // Particle when bouncing
-                    if(_w && !_k && !bq){
+                    if(_w && !_k && !bs){
                         for(var i = 0 ; i < 2 ; i++){
                             var x = this.x + F(-8, 8),
                                 y = this.y + F(-8, 8),
@@ -1700,16 +1704,16 @@ function ef(x, y, angle, aN, bq){
                         }
                     }
                 }
-            }while(_w && ge++ < 5);
+            }while(_w && gg++ < 5);
         }
     };
 
     this.eb = function(){
-        if(this.gd){
+        if(this.gf){
             return;
         }
 
-        this.gd = 1;
+        this.gf = 1;
 
         [
             [this.x - 80, this.y + 80],
@@ -1722,7 +1726,7 @@ function ef(x, y, angle, aN, bq){
             [this.x, this.y - 80],
             [this.x + 80, this.y - 80]
         ].forEach(function(p){
-            W.gc(p[0], p[1]);
+            W.ge(p[0], p[1]);
         });
 
         for(var i = 0 ; i < 40 ; i++){
@@ -1735,7 +1739,7 @@ function ef(x, y, angle, aN, bq){
                 '#f80',
                 '#ff0'
             ]), [
-                ['x', x, x + 8, d, 0, eA],
+                ['x', x, x + 8, d, 0, eC],
                 ['y', y, y - F(80, 240), d, 0],
                 ['s', F(24, 40), 0, d]
             ]);
@@ -1769,7 +1773,7 @@ function ef(x, y, angle, aN, bq){
     };
 }
 
-function gb(M){
+function gd(M){
     this.U = [];
     this.M = M;
 
@@ -1781,7 +1785,7 @@ function gb(M){
         for(var _ = 0 ; _ < M[$].length ; _++){
             this.U[$][_] = 0;
             if(M[$][_] > 0){
-                this.U[$][_] = new ga($, _, M[$][_]);
+                this.U[$][_] = new gc($, _, M[$][_]);
 
                 if(M[$][_] == 4){
                     this._V = this.U[$][_];
@@ -1795,10 +1799,10 @@ function gb(M){
     this._E = function(x, y){
         var $ = ~~(y / 80);
         var t = this.U[$] && this.U[$][~~(x / 80)];
-        return t && t.g_ && t;
+        return t && t.gb && t;
     };
 
-    this.g$ = function(T){
+    this.ga = function(T){
         if(T && T.K != 2){
             for(var i = 0 ; i < 50 ; i++){
                 var d = F(0.5, 2),
@@ -1811,13 +1815,13 @@ function gb(M){
                 ]);
             }
 
-            T.gf = 1;
+            T.gh = 1;
             this.U[T.$][T._] = 0;
         }
     };
 
-    this.gc = function(x, y){
-        this.g$(this._E(x, y));
+    this.ge = function(x, y){
+        this.ga(this._E(x, y));
     };
 
     this.e_ = function(l){
@@ -1827,9 +1831,9 @@ function gb(M){
             aL = 0;
             for(var _ = 0 ; _ < this.aO ; _++){
                 var cR = this.M[$][_] != 0;
-                var fZ = this.M[$ + 1][_] == 1 || this.M[$ + 1][_] == 2;
+                var g_ = this.M[$ + 1][_] == 1 || this.M[$ + 1][_] == 2;
 
-                if(!fZ || cR){
+                if(!g_ || cR){
                     if(aL >= l){
                         e$.push({
                             $: $,
@@ -1867,14 +1871,14 @@ function gb(M){
 
         translate(-V.x, -V.y);
 
-        R.fillStyle = _k ? '#000' : ev;
+        R.fillStyle = _k ? '#000' : ex;
         fillRect(0, 0, this.aO * 80, this.cn * 80);
 
-        var aS = V.x + J,
-            aR = V.y + _c;
+        var aT = V.x + J,
+            aS = V.y + _c;
 
-        for(var $ = ~~(V.y / 80) ; $ <  ~~(aR / 80) + 1 ; $++){
-            for(var _ = ~~(V.x / 80) ; _ <  ~~(aS / 80) + 1 ; _++){
+        for(var $ = ~~(V.y / 80) ; $ <  ~~(aS / 80) + 1 ; $++){
+            for(var _ = ~~(V.x / 80) ; _ <  ~~(aT / 80) + 1 ; _++){
                 if(this.U[$] && this.U[$][_]){
                     this.U[$][_]._g();
                 }
@@ -1893,37 +1897,37 @@ function gb(M){
 
             px = V.x + J / 2;
             dV = V.y + _c / 2;
-            var bp = ~~px - 500,
+            var bq = ~~px - 500,
                 ah = ~~dV - 500,
-                cl = bp + 1000,
+                cl = bq + 1000,
                 ck = ah + 1000;
 
             R.fillStyle = '#000';
-            if(bp > V.x){
-                fillRect(V.x, ah, bp - V.x, 1000);
+            if(bq > V.x){
+                fillRect(V.x, ah, bq - V.x, 1000);
             }
-            if(cl < aS){
-                fillRect(cl, ah, aS - cl, 1000);
+            if(cl < aT){
+                fillRect(cl, ah, aT - cl, 1000);
             }
             if(ah > V.y){
                 fillRect(V.x, V.y, J, ah - V.y);
             }
-            if(ck < aR){
-                fillRect(V.x, ck, J, aR - ck);
+            if(ck < aS){
+                fillRect(V.x, ck, J, aS - ck);
             }
 
-            drawImage(gJ, bp, ah);
+            drawImage(gJ, bq, ah);
         }
 
         restore();
     };
 }
 
-function fY(){
+function g$(){
     // Lazy init
-    this.bo = this.bn = this.x = this.y = 0;
+    this.bp = this.bo = this.x = this.y = 0;
 
-    // jZ bf which B camera would ideally kB
+    // jZ bg which B camera would ideally kB
     this.target = function(_b){
         var x, y;
         if(!this.ai){
@@ -1940,10 +1944,10 @@ function fY(){
     };
 
     // Instantly kk B camera _l B position lF it's supposed _l kB
-    this.fX = function(e){
+    this.fZ = function(e){
         var t = this.target();
-        this.bo = this.x = t.x;
-        this.bn = this.y = t.y;
+        this.bp = this.x = t.x;
+        this.bo = this.y = t.y;
     };
 
     this.bL = function(x, y, d){
@@ -1957,25 +1961,25 @@ function fY(){
         var target = this.target(1),
             d = _H(target, this),
             _v = max(1, d / 0.2),
-            angle = atan2(target.y - this.bn, target.x - this.bo),
+            angle = atan2(target.y - this.bo, target.x - this.bp),
             dU = min(_v * e, d);
 
         var px = 1 / G.aJ;
 
         if(d > px){
-            this.bo += cos(angle) * dU;
-            this.bn += sin(angle) * dU;
+            this.bp += cos(angle) * dU;
+            this.bo += sin(angle) * dU;
         }
 
-        this.x = ~~(this.bo / px) * px;
-        this.y = ~~(this.bn / px) * px;
+        this.x = ~~(this.bp / px) * px;
+        this.y = ~~(this.bo / px) * px;
     };
 }
 
-function ga($, _, K){
+function gc($, _, K){
     this.x = (this._ = _) * 80;
     this.y = (this.$ = $) * 80;
-    this.g_ = [4, 5].indexOf(K) < 0;
+    this.gb = [4, 5].indexOf(K) < 0;
     this.K = K;
 
     this._I = 1;
@@ -2089,7 +2093,7 @@ function ga($, _, K){
 
                 R.globalAlpha = this._I;
 
-                R.fillStyle = eD;
+                R.fillStyle = eF;
 
                 var x = F(400),
                     y = F(400);
@@ -2102,13 +2106,13 @@ function ga($, _, K){
         }
     };
 
-    this.fW = function(c){
+    this.fY = function(c){
         if(K === 7){
             c.aM(this._h);
         }
     };
 
-    this.fV = function(c){
+    this.fX = function(c){
         if(K == 6){
             c.aM(this._h);
         }
@@ -2126,10 +2130,10 @@ function cC(){
     this.dS = 0;
     this.cg = 0;
     this.ag = [];
-    this.bm = 0;
+    this.bn = 0;
 
-    this.fU = 1;
-    this.fT = 1;
+    this.fW = 1;
+    this.fV = 1;
     this.af = 0;
     this.aI = 4;
 
@@ -2157,7 +2161,7 @@ function cC(){
         }
 
         // Dialog
-        if(this.bm > 0 && this.ag.length){
+        if(this.bn > 0 && this.ag.length){
             R.font = '16pt Arial';
 
             var t = this.ag[0],
@@ -2174,7 +2178,7 @@ function cC(){
         }
 
         // Facing left dl right
-        scale(this._b * this.fU, this.fT);
+        scale(this._b * this.fW, this.fV);
 
         // Legs
         if(!this._j){
@@ -2182,22 +2186,22 @@ function cC(){
             translate(-18, -26);
 
             var aG = 7,
-                fS = 0.3,
-                dR = (sin((G.t * PI * 2) / fS) / 2) * aG + aG / 2;
+                fU = 0.3,
+                dR = (sin((G.t * PI * 2) / fU) / 2) * aG + aG / 2;
 
-            var fR = this.S || _U > 0 ? dR : aG;
-            var fQ = this.S || _U > 0 ? aG - dR : aG;
+            var fT = this.S || _U > 0 ? dR : aG;
+            var fS = this.S || _U > 0 ? aG - dR : aG;
 
             R.fillStyle = this.dQ;
-            fillRect(0, 45, 6, fR);
-            fillRect(30, 45, 6, fQ);
+            fillRect(0, 45, 6, fT);
+            fillRect(30, 45, 6, fS);
             restore();
         }
 
         // Let's bob a little
-        var fP = PI / 16,
-            fO = 0.5,
-            aF = (sin((G.t * PI * 2) / fO) / 2) * fP;
+        var fR = PI / 16,
+            fQ = 0.5,
+            aF = (sin((G.t * PI * 2) / fQ) / 2) * fR;
 
         if(this.aF){
             aF = this.aF;
@@ -2231,7 +2235,7 @@ function cC(){
 
         if(!this.aE){
             R.fillStyle = '#000';
-            var offset = this.ez ? -10 : 0;
+            var offset = this.eB ? -10 : 0;
             fillRect(27 + offset, dN, 4, h);
             fillRect(37 + offset, dN, 4, h);
         }
@@ -2248,7 +2252,7 @@ function cC(){
 
         this.af -= e;
 
-        if((this.bm -= e) <= 0){
+        if((this.bn -= e) <= 0){
             this._f(this.ag.slice(1));
         }
 
@@ -2260,16 +2264,16 @@ function cC(){
 
         // Friction
         var aI = this.aI * this._v,
-            fN = this.S * this._v,
-            fM = fN - this.__,
-            fL = cA(-aI * e, fM, aI * e);
+            fP = this.S * this._v,
+            fO = fP - this.__,
+            fN = cA(-aI * e, fO, aI * e);
 
-        this.__ = cA(-this._v, this.__ + fL, this._v);
+        this.__ = cA(-this._v, this.__ + fN, this._v);
 
         this.x += this.__ * e;
 
         if(this.S == -this._b){
-            N(this, 'fU', -1, 1, 0.1);
+            N(this, 'fW', -1, 1, 0.1);
         }
 
         this._b = this.S || this._b;
@@ -2279,7 +2283,7 @@ function cC(){
         this.y += this._$ * e;
 
         // Collisions
-        this.aH = this.fK(aa);
+        this.aH = this.fM(aa);
 
         // aA there has been no adjustment for up dl down, it means ky're in B air
         if(!(this.aH & 2) && !(this.aH & 1)){
@@ -2310,25 +2314,25 @@ function cC(){
         }
     };
 
-    this.fJ = function(angle, aN){
+    this.fL = function(angle, aN){
         this.__ = cos(angle) * aN;
         this._$ = sin(angle) * aN;
         this._b = this.__ < 0 ? -1 : 1;
     };
 
-    this.aM = function(source, fI){
+    this.aM = function(source, fK){
         var _b = this._b;
         if(this.af <= 0 && !this._j && !this.aE){
             gV.play();
 
-            this.fJ(atan2(
+            this.fL(atan2(
                 this.y - source.y,
                 this.x - source.x
             ), 1500);
 
             this.af = 2;
 
-            if((this._X -= fI || 1) <= 0){
+            if((this._X -= fK || 1) <= 0){
                 this.ad();
                 this._b = _b;
             }else{
@@ -2349,7 +2353,7 @@ function cC(){
             return abs(a._h.x - P.x) - abs(b._h.x - P.x);
         })[0];
 
-        T.fW(this);
+        T.fY(this);
 
         if(T.y === cf){
             return;
@@ -2374,7 +2378,7 @@ function cC(){
         return 1;
     };
 
-    this.fH = function(U){
+    this.fJ = function(U){
         this._$ = 0; // prevent from pushing kK T
 
         // Find B T kK jH B least dangerous
@@ -2383,10 +2387,10 @@ function cC(){
             return abs(a._h.x - P.x) - abs(b._h.x - P.x);
         })[0];
 
-        T.fV(this);
+        T.fX(this);
     };
 
-    this.fK = function(aa){
+    this.fM = function(aa){
         var _T = this.x - 20,
             _S = this.x + 20,
             cb = this.y - 26,
@@ -2421,7 +2425,7 @@ function cC(){
                 t |= 4;
             }
 
-            //this.fH([_C, _B]);
+            //this.fJ([_C, _B]);
         }
 
         else if(_n && _m){
@@ -2471,7 +2475,7 @@ function cC(){
         if(t & 1){
             this.aD([_n, _m].filter(Boolean));
         }else if(t & 2){
-            this.fH([_C, _B].filter(Boolean));
+            this.fJ([_C, _B].filter(Boolean));
         }
 
         return t;
@@ -2490,7 +2494,7 @@ function cC(){
         for(var i = 0 ; i < 40 ; i++){
             var x = F(this.x - 20, this.x + 20),
                 y = F(this.y - 26, this.y + 26),
-                fG = W.ea(x, this.y),
+                fI = W.ea(x, this.y),
                 d = F(0.5, 1);
             _K(3, '#900', [
                 ['x', x, x, 0.5],
@@ -2499,7 +2503,7 @@ function cC(){
             ]);
             _K(3, '#900', [
                 ['x', x, x, d],
-                ['y', y, fG, d, 0, bJ],
+                ['y', y, fI, d, 0, bJ],
                 ['s', 12, 0, d]
             ]);
         }
@@ -2518,13 +2522,13 @@ function cC(){
 
     this._f = function(s){
         this.ag = s.push ? s : [s];
-        this.bm = this.ag.length ? 3 : 0;
+        this.bn = this.ag.length ? 3 : 0;
         if(this.ag.length){
             N(this, 'cg', 0, 56, 0.3, 0, gx);
         }
     };
 
-    return eF(this);
+    return eH(this);
 }
 
 function dM(x, y){
@@ -2559,7 +2563,7 @@ function dM(x, y){
                 }
 
                 // Say random shit
-                if(this.bm <= 0){
+                if(this.bn <= 0){
                     this._f('0x' + (~~F(0x100000, 0xffffff)).toString(16));
                 }
             }
@@ -2576,8 +2580,8 @@ function dM(x, y){
                 s._f([]);
 
                 // Fly away animation
-                N(s, 'fU', 1, 0, 0.4);
-                N(s, 'fT', 1, 5, 0.3, 0.1);
+                N(s, 'fW', 1, 0, 0.4);
+                N(s, 'fV', 1, 5, 0.3, 0.1);
                 N(s, 'offsetY', 0, -400, 0.3, 0.1, 0, function(){
                     _r(function(){
                         G._A(s);
@@ -2590,7 +2594,7 @@ function dM(x, y){
         }
     };
 
-    return eF(this);
+    return eH(this);
 }
 
 function dI(x, y){
@@ -2662,7 +2666,7 @@ function dF(){
     this._v = 560;
 
     this.aC = 0;
-    this.bl = 0;
+    this.bm = 0;
 
     this._a = function(e){
         if(!this._q){
@@ -2687,22 +2691,22 @@ function dF(){
 
                 _r(function(){
                     gO.play();
-                    G.fF();
+                    G.fH();
                 }, 3500);
-            }else if(d < (J / 2) && !this.fE){
-                this.fE = 1;
+            }else if(d < (J / 2) && !this.fG){
+                this.fG = 1;
                 this._f(/*nomangle*/'You found the bug!'/*/nomangle*/); // TODO more strings
             }
         }
 
-        this.bl = (this.bl + e / 4) % 1;
+        this.bm = (this.bm + e / 4) % 1;
 
         sup._a(e);
     };
 
     this.ad = function(){
         sup.ad();
-        G.fD();
+        G.fF();
     };
 
     this.ae = function(p, f){
@@ -2714,7 +2718,7 @@ function dF(){
     this.dE = function(){
         if(this.al){
             this.aC = 1;
-            this.bl = 0;
+            this.bm = 0;
         }else{
             P._f(Y([
                 /*nomangle*/'You don\'t have any breakpoints'/*/nomangle*/,
@@ -2725,7 +2729,7 @@ function dF(){
     };
 
     this.dD = function(){
-        return 500 + (1 - abs((this.bl - 0.5) * 2)) * 1500;
+        return 500 + (1 - abs((this.bm - 0.5) * 2)) * 1500;
     };
 
     this.dC = function(){
@@ -2782,7 +2786,7 @@ function dF(){
     };
 }
 
-function fC(){
+function fE(){
     var ca = _c / 10;
 
     drawImage(_d(J, _c, function(r){
@@ -2796,8 +2800,8 @@ function fC(){
     }), 0, 0);
 }
 
-function fB(){
-    R.fillStyle = eD;
+function fD(){
+    R.fillStyle = eF;
 
     var x = ~~F(-400, 400),
         y = ~~F(-400, 400);
@@ -2809,36 +2813,36 @@ function fB(){
     restore();
 }
 
-function fA(){
+function fC(){
     G = this;
 
     var aB,
-        bk = 0,
-        bj = 0;
+        bl = 0,
+        bk = 0;
 
     G._z = 0;
     G.aJ = 1;
     
-    G.bi = 300;
+    G.bj = 300;
 
     G.t = 0;
     //G.frameCount = 0;
     //G.frameCountStart = Date.now();
-    G.bE = 0; // "Highscore: ", G.bE
+    G.aQ = 0; // "Highscore: ", G.aQ
 
-    V = new fY();
+    V = new g$();
     P = new dF();
     P._q = 0;
 
     G.cq = function(){
-        G.bD(1);
+        G.bE(1);
     };
 
-    G.bD = function(cq){
+    G.bE = function(cq){
         P = new dF();
 
         G._z = cq ? -1 : 0;
-        G.bd = 0;
+        G.bf = 0;
         G.c_();
         N(G.Z, '_I', 1, 0, 0.5, 0, 0, function(){
             G.Z = 0;
@@ -2847,22 +2851,22 @@ function fA(){
         G.add(new gE(P.x, P.y), 1);
     };
 
-    G.c_ = function(fz){
+    G.c_ = function(fB){
         G.ap = [];
         G._F = [];
         G.aK = [];
 
         G.c$(0, 0.5);
 
-        if(fz){
+        if(fB){
             return;
         }
 
-        // gb
-        W = new gb(gk(++G._z));
+        // gd
+        W = new gd(gm(++G._z));
 
         // Keeping track of B items ky cZ _V
-        W.fw = {
+        W.fA = {
             1: 8 - P._X, // max 6 _X
             2: 10 - P.al // max 5 nades
         };
@@ -2879,11 +2883,11 @@ function fA(){
         G.add(P, 7);
 
         // Prevent camera from lagging behind
-        V.fX();
+        V.fZ();
 
         // Enemies
         if(!G._z){
-            // Put B enemies bf B right spots
+            // Put B enemies bg B right spots
             var dB;
 
             G.add(dB = new dI(4500, 800), 7);
@@ -2938,22 +2942,22 @@ function fA(){
         }
     };
 
-    // fA loop
+    // fC loop
     G._a = function(e){
         G.t += e;
 
         /*// 100th frame, checking if ky dh in a bad situation, _N if yes, enable shitty mode
         if(++G.frameCount == 100 && (G.frameCount / ((Date.now() - G.frameCountStart) / 1000) < 30)){
-            G.gs(G.aJ * 0.5);
+            G.gu(G.aJ * 0.5);
             _k = 1;
         }*/
 
-        bj -= e;
-        if(bj <= 0){
+        bk -= e;
+        if(bk <= 0){
             aB = 0;
 
-            bk -= e;
-            if(bk <= 0){
+            bl -= e;
+            if(bl <= 0){
                 G.c$();
             }
         }
@@ -2961,7 +2965,7 @@ function fA(){
         var bZ = 1 / 120, // TODO adjust
             iK = ~~(e / bZ);
         while(e > 0){
-            G.fv(min(e, bZ));
+            G.fz(min(e, bZ));
             e -= bZ;
         }
 
@@ -2989,20 +2993,20 @@ function fA(){
             }
 
             // iJ hL
-            var du = eq(G.bi, 1),
+            var du = et(G.bj, 1),
                 dt = /*nomangle*/'progress: '/*/nomangle*/ + G._z + '/13',
-                fu = /*nomangle*/'breakpoints: '/*/nomangle*/ + P.al;
+                fw = /*nomangle*/'breakpoints: '/*/nomangle*/ + P.al;
 
-            X(R, du, (J - _J(du) * 10) / 2, aU ? 50 : 10, 10, G.bi > 30 ? '#fff' : '#f00');
-            cF(R, bY, (J - _J(bY) * 5) / 2, aU ? 120 : 80, 5, P._X < 3 || P.af > 1.8 ? '#f00' : '#fff');
+            X(R, du, (J - _J(du) * 10) / 2, aV ? 50 : 10, 10, G.bj > 30 ? '#fff' : '#f00');
+            cF(R, bY, (J - _J(bY) * 5) / 2, aV ? 120 : 80, 5, P._X < 3 || P.af > 1.8 ? '#f00' : '#fff');
 
             cF(R, dt, (J - _J(dt) * 4) - 10, 10, 4, '#fff');
-            cF(R, fu, 10, 10, 4, '#fff');
+            cF(R, fw, 10, 10, 4, '#fff');
 
             if(G.ak){
                 // Mobile controls
                 [gI, cI, gG, gH].forEach(function(b, i){
-                    R.globalAlpha = bh[i] ? 1 : 0.5;
+                    R.globalAlpha = bi[i] ? 1 : 0.5;
                     drawImage(b, (i + 0.5) * J / 4 - 80 / 2, _c - 100);
                 });
 
@@ -3019,7 +3023,7 @@ function fA(){
             R.fillStyle = 'white';
             R.textAlign = 'left';
             R.font = '18pt Courier New';
-            fillText('FPS: ' + G.ft, J * 0.6, 20);
+            fillText('FPS: ' + G.fv, J * 0.6, 20);
             fillText('Cyclables: ' + G.ap.length, J * 0.6, 40);
             fillText('Renderables: ' + G.aK.length, J * 0.6, 60);
             fillText('Killables: ' + G._F.length, J * 0.6, 80);
@@ -3035,34 +3039,34 @@ function fA(){
         }
     };
 
-    G.fv = function(e){
+    G.fz = function(e){
         // jB
         for(var i = G.ap.length ; --i >= 0 ;){
             G.ap[i]._a(e);
         }
 
         if(!G.Z && P._q){
-            if((G.bi -= e) <= 0){
-                G.bi = 0;
+            if((G.bj -= e) <= 0){
+                G.bj = 0;
                 G.Z = new cv(1);
                 N(G.Z, '_I', 0, 1, 0.5);
             }
 
             if(G._z){
                 // Not counting B cq time because it's skippable anyway
-                G.bd += e;
+                G.bf += e;
             }
         }
     };
 
     G.c$ = function(id, t){
         var l = [function(){
-            aB = fB;
+            aB = fD;
         }];
 
         if(!G.Z && !_k){
             l.push(function(){
-                aB = fC;
+                aB = fE;
             });
         }
 
@@ -3072,18 +3076,18 @@ function fA(){
             l[id]();
         }
 
-        bj = t || F(0.1, 0.3);
-        bk = G._z ? F(4, 8) : 99;
+        bk = t || F(0.1, 0.3);
+        bl = G._z ? F(4, 8) : 99;
     };
 
-    G.fD = function(){
+    G.fF = function(){
         _r(function(){
             G.Z = new cv(0);
             N(G.Z, '_I', 0, 1, 0.5);
         }, 2000);
     };
 
-    G.fF = function(){
+    G.fH = function(){
         if(G._z == 13){
             G.Z = new cv(2);
             N(G.Z, '_I', 0, 1, 0.5);
@@ -3093,7 +3097,7 @@ function fA(){
             _r(function(){
                 G.c_();
                 G.aq = 1;
-                _r(ex, 500);
+                _r(ez, 500);
             }, 500);
         }
     };
@@ -3106,7 +3110,7 @@ function fA(){
         G.Z = new iH();
     };
 
-    G.gs = function(r){
+    G.gu = function(r){
         G.aJ = r;
         C.width = J  * r;
         C.height = _c * r;
@@ -3130,13 +3134,13 @@ function fA(){
         _A(G.aK, e);
     };
 
-    G.dJ = function(x, y, fs, bw){
-        if(F() < fs){
-            var bX = new (Y([gq, gp]))(x, y);
-            if(--W.fw[bX.K] > 0){
+    G.dJ = function(x, y, fu, bx){
+        if(F() < fu){
+            var bX = new (Y([gs, gr]))(x, y);
+            if(--W.fA[bX.K] > 0){
                 G.add(bX, 3);
-                if(bw){
-                    bX.bw();
+                if(bx){
+                    bX.bx();
                 }
             }
         }
@@ -3146,18 +3150,18 @@ function fA(){
         gamePixels = J / _c,
         ratio = displayablePixels / gamePixels;
     if(ratio < 0.5){
-        G.gs(ratio * 2);
+        G.gu(ratio * 2);
     }*/
 
     G.c_(1);
 
-    G.Z = new (aU ? gt : el)();
-    if(!aU){
+    G.Z = new (aV ? gv : el)();
+    if(!aV){
         _k = 0;
     }
 
-    bj = 0;
-    bk = 1;
+    bk = 0;
+    bl = 1;
 
     var ds = Date.now();
     (function(){
@@ -3165,7 +3169,7 @@ function fA(){
             e = (n - ds) / 1000;
 
         if(true){
-            G.ft = ~~(1 / e);
+            G.fv = ~~(1 / e);
         }
 
         ds = n;
@@ -3176,7 +3180,7 @@ function fA(){
     })();
 }
 
-var bh = {},
+var bi = {},
     _p = {};
 
 function dr(e){
@@ -3232,7 +3236,7 @@ var ak = function(e){
     P.S = 0;
     G.ak = 1;
 
-    bh = {};
+    bi = {};
 
     var _R = C.getBoundingClientRect();
     for(var i = 0 ; i < e.touches.length ; i++){
@@ -3250,11 +3254,11 @@ var ak = function(e){
                 P.ae(1);
             }
 
-            bh[_] = 1;
+            bi[_] = 1;
         }
     }
 
-    if(P.aC && !bh[2]){
+    if(P.aC && !bi[2]){
         P.dC();
     }
 };
@@ -3283,5 +3287,5 @@ onload = function(){
 
     onresize();
 
-    new fA();
+    new fC();
 };
